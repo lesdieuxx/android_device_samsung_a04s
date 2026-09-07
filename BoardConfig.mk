@@ -113,8 +113,8 @@ $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 46137344
@@ -125,7 +125,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 55574528
 
 BOARD_USES_METADATA_PARTITION := true
 
-BOARD_ROOT_EXTRA_FOLDERS := efs cpefs
+BOARD_ROOT_EXTRA_FOLDERS := efs
 
 # Platform
 BOARD_VENDOR := samsung
@@ -135,23 +135,19 @@ TARGET_SOC := exynos850
 include hardware/samsung_slsi-linaro/config/BoardConfig850.mk
 
 # DTB
-BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_SOC).cfg
+BOARD_DTB_CFG := $(DEVICE_PATH)/configs/kernel/$(TARGET_SOC).cfg
 
 # DTBO
 BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
+BOARD_DTBO_CFG := $(DEVICE_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
 
 # Properties
-TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.exynos850
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/configs/init/fstab.exynos850
 TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
-
-# Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_exynos850
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -166,15 +162,14 @@ BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # USB
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,13600000.dwc3)
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 0
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --algorithm NONE
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem

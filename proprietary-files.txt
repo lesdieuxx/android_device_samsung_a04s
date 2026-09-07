@@ -39,22 +39,12 @@ vendor/lib64/libremosaic_wrapper.so
 vendor/lib/libSEF.quram.so
 vendor/lib/libmfb.so
 vendor/lib/libuniplugin.so
-vendor/lib/libion_exynos.so
 vendor/lib64/libSEF.quram.so
 vendor/lib64/libexynoscamera3.so
 vendor/lib64/libmfb.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
-vendor/lib64/libion_exynos.so
-vendor/lib64/libhwjpeg.so
-vendor/lib64/libexynosv4l2.so
-vendor/lib64/libcsc.so
-vendor/lib64/libexynosgraphicbuffer.so
-vendor/lib64/libexynosscaler.so
-vendor/lib64/libacryl.so
-vendor/lib64/libgiantmscl.so
-vendor/lib64/libexynosutils.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 vendor/etc/btcon.json
 
@@ -128,7 +118,8 @@ vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendo
 vendor/lib64/hw/vulkan.mali.so
 
 # Keymint
-vendor/etc/init/android.hardware.security.keymint-service.rc
+vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
+vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
 vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk.so
@@ -153,7 +144,7 @@ vendor/lib64/libfloatingfeature.so
 vendor/lib64/libvkmanager_vendor.so
 
 vendor/bin/hw/rild
-vendor/etc/init/vendor.sem.rilchip.rc
+vendor/etc/init/vendor.samsung.rilchip.slsi.rc
 vendor/lib64/libSemDataProps.so
 vendor/lib64/libSemTelephonyProps.so
 vendor/lib64/libril_sem.so
@@ -162,9 +153,6 @@ vendor/lib64/libsemnativecarrierfeature.so
 vendor/lib64/libsecril-client.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
-vendor/lib64/vendor.samsung.hardware.radio@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio@2.1.so
-vendor/lib64/vendor.samsung.hardware.radio@2.2.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 
 # VaultKeeper
@@ -173,15 +161,15 @@ vendor/etc/init/vaultkeeper_common.rc
 vendor/lib64/libstork_shared.so
 vendor/lib64/libvkservice.so
 vendor/lib64/libdsms_vendor.so
-vendor/lib64/vendor.samsung.frameworks.security.dsms@1.0.so
+vendor/lib64/vendor.samsung.frameworks.security.dsms-V1-ndk.so
 
 # SECNATIVE
 vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
 
 # TEEGRIS
-vendor/tee/00000000-0000-0000-0000-000000010081
-vendor/tee/00000000-0000-0000-0000-000000020081
+vendor/tee/driver/00000000-0000-0000-0000-494363447256
+vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/00000000-0000-0000-0000-000000534b4d
 vendor/tee/00000000-0000-0000-0000-000048444350
 vendor/tee/00000000-0000-0000-0000-0000534b504d
@@ -190,6 +178,7 @@ vendor/tee/00000000-0000-0000-0000-0053545354ab
 vendor/tee/00000000-0000-0000-0000-00575644524d
 vendor/tee/00000000-0000-0000-0000-42494f535542
 vendor/tee/00000000-0000-0000-0000-46494e474552
+vendor/tee/00000000-0000-0000-0000-4662436b6d52
 vendor/tee/00000000-0000-0000-0000-474154454b45
 vendor/tee/00000000-0000-0000-0000-4b45594d5354
 vendor/tee/00000000-0000-0000-0000-505256544545
@@ -198,9 +187,6 @@ vendor/tee/00000000-0000-0000-0000-564c544b5052
 vendor/tee/00000000-0000-0000-0000-656e676d6f64
 vendor/tee/00000000-0000-0000-0000-657365636f6d
 vendor/tee/00000000-0000-0000-0000-6b6e78677564
-vendor/tee/driver/00000000-0000-0000-0000-494363447256
-vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
-vendor/tee/tui/resolution_common/ID00000100
 vendor/bin/tzts_daemon
 vendor/lib/libuuid.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libuuid.so
@@ -227,7 +213,7 @@ vendor/lib/liboemcrypto.so
 
 # Wi-Fi
 vendor/etc/init/wifi.rc
-vendor/etc/init/wifi_slsi.rc
+vendor/etc/init/wifi_slsi_850.rc
 vendor/etc/wifi/hydra_config.sdb
 vendor/etc/wifi/mx140.bin
 vendor/etc/wifi/mx140_t.bin

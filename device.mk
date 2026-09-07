@@ -136,9 +136,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_ENABLE_UFFD_GC := true
 
-# Keymaster
+# Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-service.samsung
+    android.hardware.hardware_keystore.xml
 
 # Lineage Health
 PRODUCT_PACKAGES += \

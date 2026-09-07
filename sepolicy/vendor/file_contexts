@@ -4,6 +4,7 @@
 
 # Block
 /sys/devices/platform/(.*)/block/sda/queue/discard_max_bytes                                              u:object_r:sysfs_block_writable:s0
+/sys/devices/platform/(.*)/block/sda/queue/read_ahead_kb                                                  u:object_r:sysfs_block_writable:s0
 /sys/devices/platform/(.*)/block/mmcblk0/mmcblk0p[0-9]+/start                                             u:object_r:sysfs_block:s0
 
 # Camera
@@ -34,6 +35,8 @@
 /efs/ssm(/.*)?                                                                                            u:object_r:ssm_efs_file:s0
 /efs/usb_hw_param(/.*)?                                                                                   u:object_r:sec_efs_file:s0
 /mnt/vendor/efs/wv.keys                                                                                   u:object_r:mnt_vendor_file:s0
+/efs/DAK/keymaster(/.*)?                                                                                  u:object_r:keymaster_efs_file:s0
+/efs/DAK/prov_data(/.*)?                                                                                  u:object_r:keymaster_efs_file:s0
 
 # Fingerprint
 /dev/goodix_fp                                                                                            u:object_r:fp_sensor_device:s0
