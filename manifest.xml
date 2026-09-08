@@ -2,7 +2,7 @@
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <version>7.0</version>
+        <version>7.1</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
@@ -82,46 +82,6 @@
         </interface>
         <interface>
             <name>IOmxStore</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.security.keymint</name>
-        <version>1</version>
-        <interface>
-            <name>IKeyMintDevice</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.security.secureclock</name>
-        <version>1</version>
-        <interface>
-            <name>ISecureClock</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.security.sharedsecret</name>
-        <version>1</version>
-        <interface>
-            <name>ISharedSecret</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.samsung.hardware.keymint</name>
-        <version>1</version>
-        <interface>
-            <name>ISehKeyMintExtension</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.samsung.hardware.keymint</name>
-        <version>1</version>
-        <interface>
-            <name>ISehKeyMintFactory</name>
             <instance>default</instance>
         </interface>
     </hal>

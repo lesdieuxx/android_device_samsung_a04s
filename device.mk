@@ -20,7 +20,7 @@ PRODUCT_CHARACTERISTICS := phone
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio@7.0-impl \
+    android.hardware.audio@7.1-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
@@ -105,8 +105,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl:64 \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper-service.samsung
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
@@ -136,9 +135,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_ENABLE_UFFD_GC := true
 
-# Keymint
+# KeyMint
 PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.xml
+    android.hardware.security.keymint-service.samsung
 
 # Lineage Health
 PRODUCT_PACKAGES += \

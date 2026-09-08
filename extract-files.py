@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -41,19 +42,17 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libexynoscamera3.so',
     ) : blob_fixup()
         .add_needed('libui_shim.so'),
+
     (
-        'vendor/bin/hw/android.hardware.security.keymint-service.samsung',
         'vendor/lib64/libskeymint10device.so',
         'vendor/lib64/libskeymint_cli.so',
+    ) : blob_fixup()
+        .add_needed('libshim_crypto.so'),
+    (
         'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk.so'
     ) : blob_fixup()
-        # .add_needed('android.hardware.security.rkp-V3-ndk.so')
-        .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
-    (
-        'vendor/etc/init/android.hardware.security.keymint-service.samsung.rc'
-    ) : blob_fixup()
-        .regex_replace('android\\.hardware\\.security\\.keymint-service\n',
-            'android.hardware.security.keymint-service.samsung\n'),
+        .add_needed('android.hardware.security.rkp-V1-ndk.so'),
+
     (
         'vendor/lib/libsensorlistener.so',
         'vendor/lib64/libsensorlistener.so',

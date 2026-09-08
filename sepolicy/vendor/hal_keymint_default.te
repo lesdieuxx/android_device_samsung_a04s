@@ -1,21 +1,4 @@
-# Allow keymint HAL to read/write efs_file
-allow hal_keymint_default efs_file:dir create_dir_perms;
-allow hal_keymint_default efs_file:file create_file_perms;
-
-# Allow keymint HAL to read/write prov_efs_file
-allow hal_keymint_default prov_efs_file:dir create_dir_perms;
-allow hal_keymint_default prov_efs_file:file create_file_perms;
-
-# Allow keymint HAL to read/write keymaster_efs_file
-allow hal_keymint_default keymaster_efs_file:dir create_dir_perms;
-allow hal_keymint_default keymaster_efs_file:file create_file_perms;
-
-# Allow keymint HAL to read/write sec_efs_file
-allow hal_keymint_default sec_efs_file:dir create_dir_perms;
-allow hal_keymint_default sec_efs_file:file create_file_perms;
-
-# Allow keymint HAL to access TZ device
-allow hal_keymint_default tz_user_device:chr_file rw_file_perms;
 allow hal_keymint_default ssp_device:chr_file rw_file_perms;
 
-allow hal_keymint_default mnt_vendor_file:dir search;
+allow hal_keymint_default keymaster_efs_file:dir search;
+allow hal_keymint_default keymaster_efs_file:file r_file_perms;

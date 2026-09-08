@@ -118,8 +118,6 @@ vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendo
 vendor/lib64/hw/vulkan.mali.so
 
 # Keymint
-vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
-vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
 vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk.so
@@ -162,6 +160,8 @@ vendor/lib64/libstork_shared.so
 vendor/lib64/libvkservice.so
 vendor/lib64/libdsms_vendor.so
 vendor/lib64/vendor.samsung.frameworks.security.dsms-V1-ndk.so
+vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
+vendor/etc/init/pa_daemon_teegris.rc
 
 # SECNATIVE
 vendor/lib/libsecnativefeature.so

@@ -313,6 +313,9 @@ on post-fs-data
     mkdir /data/vendor/log/hwc 0771 system graphics
 
 # Fingerprint sensor
+    chmod 0660 /dev/esfp0
+    chown system system /dev/esfp0
+
     chmod 0660 /dev/goodix_fp
     chown system system /dev/goodix_fp
     chown system radio /sys/class/fingerprint/fingerprint/type_check
@@ -325,6 +328,8 @@ on post-fs-data
 
     mkdir /data/vendor/biometrics 0770 system system
     mkdir /data/vendor/fpSnrTest 0770 system system
+    mkdir /efs/biometrics 0770 system system
+    mkdir /efs/biometrics/meta 0770 system system
 
 # setup cgroup freezer for freecess
     mkdir /dev/freezer

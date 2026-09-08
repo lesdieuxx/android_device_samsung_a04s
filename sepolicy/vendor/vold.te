@@ -1,2 +1,7 @@
-allow vold efs_file:dir rw_dir_perms;
-allow vold sysfs_block_writable:file rw_file_perms;
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+r_dir_file(vold, efs_file)
+r_dir_file(vold, mnt_vendor_file)
