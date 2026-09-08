@@ -143,6 +143,9 @@ vendor/lib64/libvkmanager_vendor.so
 
 vendor/bin/hw/rild
 vendor/etc/init/vendor.samsung.rilchip.slsi.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_31.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_31.xml
 vendor/lib64/libSemDataProps.so
 vendor/lib64/libSemTelephonyProps.so
 vendor/lib64/libril_sem.so

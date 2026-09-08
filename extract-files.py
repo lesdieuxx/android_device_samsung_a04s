@@ -24,7 +24,6 @@ namespace_imports = [
     'hardware/samsung',
     'hardware/samsung_slsi-linaro/exynos',
     'hardware/samsung_slsi-linaro/graphics',
-    'hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3',
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):

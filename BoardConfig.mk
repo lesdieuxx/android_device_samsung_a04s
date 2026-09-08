@@ -47,7 +47,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 # Camera
 $(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
-$(call soong_config_set,samsungCameraVars,extra_ids,214,220)
+# $(call soong_config_set,samsungCameraVars,extra_ids,214,220)
 
 # Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1

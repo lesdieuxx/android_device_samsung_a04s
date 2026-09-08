@@ -64,8 +64,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service.samsung \
-    libGrallocMapperCamera
+    android.hardware.camera.provider-service.samsung
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
@@ -83,11 +82,10 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.composer.hwc3-service.slsi \
-    android.hardware.graphics.allocator@2.0-impl:64 \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1 \
-    gralloc.universal3830
+    android.hardware.graphics.composer@2.2-service \
+    android.hardware.graphics.allocator@4.0-impl \
+    android.hardware.graphics.allocator@4.0-service \
+    android.hardware.graphics.mapper@4.0-impl
 
 PRODUCT_PACKAGES += \
     libGrallocWrapper
@@ -105,7 +103,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper-service.samsung
+    android.hardware.gatekeeper-service.teegris
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
@@ -237,7 +235,12 @@ PRODUCT_COPY_FILES += \
 # RIL
 PRODUCT_PACKAGES += \
     secril_config_svc \
-    cbd
+    cbd \
+    sehradiomanager \
+    vendor.samsung.hardware.radio@2.2
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -250,7 +253,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     hardware/samsung_slsi/libbt \
-    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
+    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc4 \
     hardware/samsung_slsi-linaro/exynos/libaudio/audiohal_comv1 \
     hardware/samsung_slsi-linaro/exynos/cpboot_v3
 
